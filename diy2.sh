@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "开始 DIY2 配置……"
+echo "========================="
+
+chmod +x ${GITHUB_WORKSPACE}/function.sh
+source ${GITHUB_WORKSPACE}/function.sh
+
 # 修改密码
 sed -i 's/root:::0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
 
@@ -31,3 +37,6 @@ sed -i "s/kmod-nft-offload/kmod-nft-offload kmod-nft-tproxy/" include/target.mk
 
 # 修改target/linux/x86/Makefile
 sed -i 's/DEFAULT_PACKAGES += /DEFAULT_PACKAGES += luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy /g' target/linux/x86/Makefil
+
+echo "========================="
+echo " DIY2 配置完成……"
