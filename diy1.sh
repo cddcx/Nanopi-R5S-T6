@@ -3,6 +3,9 @@
 echo "开始 DIY1 配置……"
 echo "========================="
 
+chmod +x ${GITHUB_WORKSPACE}/function.sh
+source ${GITHUB_WORKSPACE}/function.sh
+
 # luci-app-homeproxy
 #git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy           ####### homeproxy的默认版本(二选一) 
 #git clone -b dev https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
