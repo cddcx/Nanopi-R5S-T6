@@ -1,6 +1,7 @@
 name: immortalwrt-24.10
 
 on:
+  repository_dispatch:
   workflow_dispatch:
     inputs:
       manual:
