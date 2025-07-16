@@ -32,11 +32,11 @@ rm -rf feeds/luci/applications/{luci-app-v2raya,luci-app-shadowsocks-libev}
 rm -rf feeds/packages/net/{v2raya,microsocks,shadowsocks-libev}}
 
 # 修改include/target.mk
-sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-opkg luci-app-firewall /" include/target.mk
-sed -i "s/kmod-nft-offload/kmod-nft-offload kmod-nft-tproxy/" include/target.mk
+#sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-opkg luci-app-firewall /" include/target.mk
+sed -i 's/luci-app-cpufreq/luci-app-opkg luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy/g' include/target.mk
 
 # 修改target/linux/x86/Makefile
-sed -i 's/DEFAULT_PACKAGES += /DEFAULT_PACKAGES += luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy /g' target/linux/armsr/Makefil
+sed -i 's/autocore/autocore/g' target/linux/armsr/Makefil
 
 echo "========================="
 echo " DIY2 配置完成……"
