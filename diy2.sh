@@ -36,7 +36,7 @@ rm -rf feeds/packages/net/{v2raya,microsocks,shadowsocks-libev}}
 sed -i 's/luci-app-cpufreq/luci-app-opkg luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy/g' include/target.mk
 
 # 修改target/linux/x86/Makefile
-sed -i 's/autocore/autocore/g' target/linux/armsr/Makefil
+#sed -i 's/autocore/autocore/g' target/linux/armsr/Makefil
 
 echo "========================="
 echo " DIY2 配置完成……"
