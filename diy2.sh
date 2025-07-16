@@ -33,7 +33,7 @@ rm -rf feeds/packages/net/{v2raya,microsocks,shadowsocks-libev}}
 
 # 修改include/target.mk
 #sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-opkg luci-app-firewall /" include/target.mk
-sed -i 's/luci-app-cpufreq/luci-app-opkg luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy/g' include/target.mk
+#sed -i 's/luci-app-cpufreq/luci-app-opkg luci-app-homeproxy luci-app-lxc luci-app-nikki luci-app-openclash luci-app-openlist luci-app-udpxy/g' include/target.mk
 
 # 修改target/linux/x86/Makefile
 #sed -i 's/autocore/autocore/g' target/linux/armsr/Makefil
