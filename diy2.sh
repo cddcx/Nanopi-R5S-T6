@@ -3,8 +3,8 @@
 echo "开始 DIY2 配置……"
 echo "========================="
 
-chmod +x ${GITHUB_WORKSPACE}/function.sh
-source ${GITHUB_WORKSPACE}/function.sh
+#chmod +x ${GITHUB_WORKSPACE}/function.sh
+#source ${GITHUB_WORKSPACE}/function.sh
 
 # 修改密码
 sed -i 's/root:::0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
