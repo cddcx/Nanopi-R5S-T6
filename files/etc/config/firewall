@@ -15,36 +15,9 @@ config zone
 	option forward 'ACCEPT'
 	list network 'lan'
 
-config include 'nikki'
-	option type 'script'
-	option path '/etc/nikki/scripts/firewall_include.sh'
-	option fw4_compatible '1'
-
-config include 'homeproxy_forward'
-	option type 'nftables'
-	option path '/var/run/homeproxy/fw4_forward.nft'
-	option position 'chain-pre'
-	option chain 'forward'
-
-config include 'homeproxy_input'
-	option type 'nftables'
-	option path '/var/run/homeproxy/fw4_input.nft'
-	option position 'chain-pre'
-	option chain 'input'
-
-config include 'homeproxy_post'
-	option type 'nftables'
-	option path '/var/run/homeproxy/fw4_post.nft'
-	option position 'table-post'
-
 config zone
 	option name 'IPTV'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'REJECT'
 	list network 'IPTV'
-
-config include 'openclash'
-	option type 'script'
-	option path '/var/etc/openclash.include'
-
