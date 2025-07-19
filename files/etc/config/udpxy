@@ -1,10 +1,10 @@
 
 config udpxy
-	      option disabled '0'
-	      option respawn '1'
-	      option status '1'
-	      option port '4100'
-	      option bind 'br-lan'
-              option source_network 'IPTV'
-	      option source 'eth2'
-	      option max_clients '99'
+	option disabled '0'
+	option respawn '1'
+	option status '1'
+	option port '4100'
+	option bind 'br-lan'
+        option source_network 'IPTV'
+	option source 'eth2'
+	option max_clients '99'
