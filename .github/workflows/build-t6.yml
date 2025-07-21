@@ -1,4 +1,4 @@
-name: immortalwrt-24.10
+name: Nanopi
 
 on:
   repository_dispatch:
@@ -31,9 +31,6 @@ on:
         required: true
         type: choice
         options: [ armv8 ]
-      
-      manual:
-        description: '手动触发一次编译'
 
 env:
   #REPO_URL: https://github.com/immortalwrt/immortalwrt
