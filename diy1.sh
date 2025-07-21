@@ -16,6 +16,9 @@ source ${GITHUB_WORKSPACE}/function.sh
 ## luci-app-passwall
 #merge_package main https://github.com/xiaorouji/openwrt-passwall package luci-app-passwall
 
+# luci-app-fancontrol 风扇控制
+echo "src-git fancontrol https://github.com/rockjake/luci-app-fancontrol.git" >> "feeds.conf.default"
+
 # luci-app-nikki
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
 
