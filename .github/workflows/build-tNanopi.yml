@@ -6,7 +6,7 @@ on:
     inputs:
       URL:
         description: '选择源码：'
-        default: 'openwrt'
+        default: 'immortalwrt'
         required: true
         type: choice
         options: [ openwrt,  immortalwrt ]
