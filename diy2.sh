@@ -69,13 +69,9 @@ sed -i 's/procd_set_param stdout 1/procd_set_param stdout 0/g' feeds/packages/ut
 sed -i 's/procd_set_param stderr 1/procd_set_param stderr 0/g' feeds/packages/utils/ttyd/files/ttyd.init
 
 ## 删除软件
-rm -rf feeds/luci/applications/luci-app-adguardhome
-rm -rf feeds/packages/net/adguardhome
 #rm -rf feeds/luci/themes/luci-theme-bootstrap
-rm -rf feeds/luci/applications/luci-app-alist
-rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/{luci-app-v2raya,luci-app-shadowsocks-libev}
-rm -rf feeds/packages/net/{v2raya,microsocks,shadowsocks-libev}}
+rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-alist,luci-app-v2raya,luci-app-shadowsocks-libev,luci-app-openclash}
+rm -rf feeds/packages/net/{adguardhome,alist,v2raya,microsocks,shadowsocks-libev}}
 
 # 修改include/target.mk
 #sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-opkg luci-app-firewall /" include/target.mk
