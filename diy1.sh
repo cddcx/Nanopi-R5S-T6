@@ -50,17 +50,18 @@ echo "========================="
 ## luci-app-passwall
 #merge_package main https://github.com/xiaorouji/openwrt-passwall package luci-app-passwall
 
+# luci-app-nikki
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+
 # luci-app-fancontrol 风扇控制
 #echo "src-git fancontrol https://github.com/rockjake/luci-app-fancontrol.git" >> "feeds.conf.default"
 merge_package main https://github.com/rockjake/luci-app-fancontrol.git package luci-app-fancontrol
 merge_package main https://github.com/rockjake/luci-app-fancontrol.git package fancontrol
-sed -i 's/风扇通用控制小程序/风扇控制/g' feeds/fancontrol/luci-app-fancontrol/po/zh_Hans/fancontrol.po
+sed -i 's/风扇通用控制小程序/风扇控制/g' package/luci-app-fancontrol/po/zh_Hans/fancontrol.po
+sed -i 's/services/system/g' package/luci-app-fancontrol/root/usr/share/luci/menu.d/luci-app-fancontrol.json
 
 # luci-app-openclash
-#merge_package master https://github.com/vernesong/OpenClash package luci-app-openclash
-
-# luci-app-nikki
-echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+merge_package master https://github.com/vernesong/OpenClash package luci-app-openclash
 
 # bpf - add host clang-15/18/20 support
 sed -i 's/clang-13/clang-15 clang-18 clang-20/g' include/bpf.mk
