@@ -54,7 +54,7 @@ echo "========================="
 #echo "src-git fancontrol https://github.com/rockjake/luci-app-fancontrol.git" >> "feeds.conf.default"
 
 # luci-app-openclash
-merge_package master https://github.com/vernesong/OpenClash package luci-app-openclash
+#merge_package master https://github.com/vernesong/OpenClash package luci-app-openclash
 
 # luci-app-nikki
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
