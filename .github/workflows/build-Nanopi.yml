@@ -20,7 +20,7 @@ on:
         
       config_s:
         description: '选择config配置文件'
-        default: 'r5s.config'
+        default: 't6.config'
         required: true
         type: choice
         options: [ r5s.config, t6.config ]
