@@ -71,7 +71,7 @@ sed -i 's/procd_set_param stderr 1/procd_set_param stderr 0/g' feeds/packages/ut
 ## 删除软件
 #rm -rf feeds/luci/themes/luci-theme-bootstrap
 rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-alist,luci-app-v2raya,luci-app-shadowsocks-libev,luci-app-openclash}
-rm -rf feeds/packages/net/{adguardhome,alist,v2raya,microsocks,shadowsocks-libev}}
+rm -rf feeds/packages/net/{adguardhome,alist,v2raya,microsocks,shadowsocks-libev,sing-box}
 
 # 修改include/target.mk
 #sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-opkg luci-app-firewall /" include/target.mk
