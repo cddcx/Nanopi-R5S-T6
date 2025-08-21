@@ -14,10 +14,3 @@ config zone
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
 	list network 'lan'
-
-config zone
-	option name 'IPTV'
-	option input 'ACCEPT'
-	option output 'ACCEPT'
-	option forward 'REJECT'
-	list network 'IPTV'
