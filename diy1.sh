@@ -50,8 +50,9 @@ echo "========================="
 ## luci-app-passwall
 #merge_package main https://github.com/xiaorouji/openwrt-passwall package luci-app-passwall
 
-# luci-app-nikki
+# luci-app-nikki和luci-app-momo
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+echo "src-git momo https://github.com/nikkinikki-org/OpenWrt-momo.git;main" >> "feeds.conf.default"
 
 # sing-box
 merge_package v5 https://github.com/sbwml/openwrt_helloworld package sing-box
