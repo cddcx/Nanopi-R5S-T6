@@ -10,11 +10,13 @@ config globals 'globals'
 	option packet_steering '1'
 
 config device
-	option name 'eth1'
-	option macaddr '06:d6:d2:7d:23:79'
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0'
+	list ports 'eth1'
 
 config interface 'lan'
-	option device 'eth1'
+	option device 'br-lan''
 	option proto 'static'
 	option ipaddr '192.168.88.2'
 	option netmask '255.255.255.0'
