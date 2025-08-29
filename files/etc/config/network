@@ -6,20 +6,28 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fde2:ee0c:3717::/48'
+	option ula_prefix 'fdc0:4899:d7ce::/48'
 	option packet_steering '1'
 
 config device
 	option name 'br-lan'
 	option type 'bridge'
-	list ports 'eth0'
 	list ports 'eth1'
+	list ports 'eth2'
+
+config device
+	option name 'eth1'
+	option macaddr '06:d6:d2:7d:23:79'
 
 config interface 'lan'
-	option device 'br-lan''
+	option device 'br-lan'
 	option proto 'static'
 	option ipaddr '192.168.88.2'
 	option netmask '255.255.255.0'
 	option ip6assign '60'
 	option gateway '192.168.88.1'
-    list dns '192.168.88.1'
+	list dns '192.168.88.1'
+
+config device
+	option name 'eth2'
+	option macaddr '06:d6:d2:7d:23:78'
